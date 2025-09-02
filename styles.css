@@ -1,7 +1,6 @@
 /* 
   styles.css — Portfólio da Taciany
   Regras em CSS puro. Sem Bootstrap.
-  Dica: ajusta as cores em :root se quiser trocar o tema rapidamente.
 */
 :root {
   --bg: #0f1220;
