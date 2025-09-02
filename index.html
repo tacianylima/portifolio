@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <!--
+    Páginas desenvolvidas em HTML5 + CSS puro.
+    Observações:
+    - Menu fixo no topo para evitar uso do botão VOLTAR
+    - Marcação semântica: header/nav/main/section/article/footer
+    - Sem Bootstrap ou bibliotecas externas
+  -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Portfólio pessoal — Taciany Lima">
+  <title>Início — Taciany Lima</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a href="#conteudo" class="skip-link">Pular para o conteúdo</a>
+  <header class="site-header">
+    <div class="container">
+      <nav class="site-nav" aria-label="Navegação principal">
+        <a class="brand" href="index.html">
+          <span class="brand-badge" aria-hidden="true"></span>
+          Taciany Lima
+        </a>
+        <div class="nav-links" role="menubar">
+          <a role="menuitem" href="sobre.html" >Sobre mim</a>
+          <a role="menuitem" href="formacao.html" >Formação & Idiomas</a>
+          <a role="menuitem" href="portfolio.html" >Portfólio</a>
+          <a role="menuitem" href="contato.html" >Contato</a>
+          <a role="menuitem" href="https://www.linkedin.com/in/taciany-lima-66734613b/" target="_blank" rel="noopener">LinkedIn ↗</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+  <main id="conteudo">
+
+  <!-- Seção de destaque (hero) -->
+  <section class="hero">
+    <div class="container hero-inner">
+      <div class="profile-card" aria-hidden="true">
+        <!-- Avatar SVG simples apenas para compor a identidade visual -->
+        <img src="assets/profile.svg" alt="Avatar gráfico de Taciany">
+      </div>
+      <div>
+        <h1>Taciany Lima</h1>
+        <p class="lead">Tecnologia • Inovação • Educação pública em Araucária/PR. Gestão de projetos, dados e automação para melhorar serviços e experiências.</p>
+        <div class="btn-row">
+          <a class="btn" href="sobre.html">Sobre mim</a>
+          <a class="btn" href="formacao.html">Formação & Idiomas</a>
+          <a class="btn" href="portfolio.html">Portfólio</a>
+          <a class="btn ghost" href="contato.html">Contato</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <h2>O que eu faço</h2>
+      <div class="card-grid">
+        <article class="card">
+          <h3>Transformação digital na educação</h3>
+          <p>Atuação em iniciativas de modernização na rede municipal de ensino: sistemas educacionais, integração de dados e suporte a escolas e CMEIs.</p>
+          <p class="meta">Ferramentas: gestão de requisitos, UX prática, documentação oficial.</p>
+        </article>
+        <article class="card">
+          <h3>Automação & dados</h3>
+          <p>Planilhas avançadas e Apps Script para otimizar fluxos, consolidar informações e gerar painéis de acompanhamento.</p>
+          <p class="meta">Google Sheets, Apps Script, boas práticas de governança.</p>
+        </article>
+        <article class="card">
+          <h3>Saúde digital (apoio intersetorial)</h3>
+          <p>Participação em frentes com IPM Saúde, teleatendimento e conformidade com LGPD/RDC, sempre alinhando tecnologia a processos.</p>
+          <p class="meta">Integrações, qualidade de dados e atendimento.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  </main>
+  <footer class="site-footer">
+    <div class="container grid">
+      <small>© 2025 Taciany Lima — Portfólio pessoal. Feito em HTML5 + CSS.</small>
+      <small>Design leve, acessível e sem frameworks. <a href="index.html">Início</a></small>
+    </div>
+  </footer>
+</body>
+</html>

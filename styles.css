@@ -1,0 +1,89 @@
+/* 
+  styles.css — Portfólio da Taciany
+  Regras em CSS puro. Sem Bootstrap.
+  Dica: ajusta as cores em :root se quiser trocar o tema rapidamente.
+*/
+:root {
+  --bg: #0f1220;
+  --bg-soft: #14182b;
+  --card: #191e34;
+  --text: #e6e9f3;
+  --muted: #a9b0c7;
+  --accent: #8ad6ff;
+  --accent-2: #c59dff;
+  --shadow: 0 10px 30px rgba(0,0,0,.25);
+  --radius: 18px;
+  --maxw: 1000px;
+}
+
+/* Reset essencial e tipografia base */
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+html, body { margin: 0; padding: 0; background: var(--bg); color: var(--text); font: 16px/1.6 system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji"; }
+img, svg { display: block; max-width: 100%; height: auto; }
+a { color: var(--accent); text-decoration: none; }
+a:hover { text-decoration: underline; }
+p { margin: .75rem 0 1.25rem; }
+
+.container { width: 100%; max-width: var(--maxw); padding: 0 20px; margin: 0 auto; }
+
+/* Cabeçalho fixo (menu visível em todas as páginas) */
+.site-header { position: sticky; top: 0; z-index: 50; backdrop-filter: blur(8px); background: color-mix(in oklab, var(--bg) 85%, black 15%); border-bottom: 1px solid rgba(255,255,255,.06); }
+.site-nav { display: flex; align-items: center; justify-content: space-between; gap: 12px; height: 64px; }
+.brand { font-weight: 700; letter-spacing: .4px; display: inline-flex; align-items: center; gap: 10px; }
+.brand-badge { width: 22px; height: 22px; border-radius: 8px; background: linear-gradient(135deg, var(--accent), var(--accent-2)); box-shadow: var(--shadow); }
+.nav-links { display: flex; gap: 14px; flex-wrap: wrap; }
+.nav-links a { padding: 8px 12px; border-radius: 12px; transition: transform .12s ease; }
+.nav-links a:hover { transform: translateY(-1px); background: rgba(255,255,255,.06); text-decoration: none; }
+.nav-links a[aria-current="page"] { background: linear-gradient(135deg, rgba(138,214,255,.18), rgba(197,157,255,.18)); outline: 1px solid rgba(138,214,255,.35); }
+
+/* Seções e cartões */
+.hero { padding: 64px 0 24px; }
+.hero-inner { display: grid; grid-template-columns: 160px 1fr; gap: 28px; align-items: center; }
+.hero h1 { margin: 0 0 6px; font-size: clamp(28px, 2.6vw + 10px, 44px); line-height: 1.15; }
+.hero p.lead { color: var(--muted); font-size: 1.05rem; margin-top: 6px; }
+
+.profile-card { display: grid; place-items: center; width: 160px; height: 160px; border-radius: 50%; background: radial-gradient(60% 60% at 50% 40%, #263055 0%, #171d33 100%); border: 1px solid rgba(255,255,255,.06); box-shadow: var(--shadow); }
+
+.section { padding: 28px 0 60px; }
+.section h2 { font-size: 1.4rem; letter-spacing: .3px; margin: 0 0 12px; }
+.card-grid { display: grid; grid-template-columns: repeat(12,1fr); gap: 16px; }
+.card { grid-column: span 12; background: var(--card); border: 1px solid rgba(255,255,255,.06); border-radius: var(--radius); padding: 18px; box-shadow: var(--shadow); }
+.card h3 { margin-top: 0; }
+.card .meta { color: var(--muted); font-size: .95rem; }
+
+@media (min-width: 720px) {
+  .card { grid-column: span 6; }
+}
+@media (min-width: 980px) {
+  .card { grid-column: span 4; }
+}
+
+.btn-row { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 10px; }
+.btn { display: inline-flex; align-items: center; gap: 8px; padding: 10px 14px; border-radius: 12px; border: 1px solid rgba(255,255,255,.12); background: linear-gradient(135deg, rgba(255,255,255,.04), rgba(255,255,255,.02)); text-decoration: none; }
+.btn:hover { background: linear-gradient(135deg, rgba(138,214,255,.18), rgba(197,157,255,.18)); text-decoration: none; }
+.btn.ghost { background: transparent; }
+
+/* Formulário (visual) */
+.form { display: grid; gap: 14px; max-width: 720px; }
+.input { display: grid; gap: 6px; }
+.input label { font-weight: 600; }
+.input input, .input textarea { width: 100%; padding: 12px 13px; background: #0e1326; color: var(--text); border: 1px solid rgba(255,255,255,.12); border-radius: 12px; outline: none; }
+.input input:focus, .input textarea:focus { border-color: var(--accent); box-shadow: 0 0 0 3px rgba(138,214,255,.25); }
+.input small { color: var(--muted); }
+textarea { min-height: 160px; resize: vertical; }
+
+.note { color: var(--muted); font-size: .95rem; margin-top: 6px; }
+
+/* Rodapé */
+.site-footer { padding: 28px 0 46px; color: var(--muted); border-top: 1px solid rgba(255,255,255,.06); }
+.site-footer a { color: var(--muted); }
+.site-footer .grid { display: grid; gap: 10px; justify-content: space-between; align-items: center; grid-template-columns: 1fr; }
+@media (min-width: 720px) {
+  .site-footer .grid { grid-template-columns: 1fr auto; }
+}
+
+/* Acessibilidade */
+:focus-visible { outline: 3px solid var(--accent); outline-offset: 2px; }
+.skip-link { position: absolute; left: -9999px; top: -9999px; }
+.skip-link:focus { left: 12px; top: 12px; background: #000; color: #fff; padding: 6px 10px; border-radius: 8px; }

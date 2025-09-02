@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <!--
+    Páginas desenvolvidas em HTML5 + CSS puro.
+    Observações:
+    - Menu fixo no topo para evitar uso do botão VOLTAR
+    - Marcação semântica: header/nav/main/section/article/footer
+    - Sem Bootstrap ou bibliotecas externas
+  -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Portfólio pessoal — Taciany Lima">
+  <title>Contato — Taciany Lima</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a href="#conteudo" class="skip-link">Pular para o conteúdo</a>
+  <header class="site-header">
+    <div class="container">
+      <nav class="site-nav" aria-label="Navegação principal">
+        <a class="brand" href="index.html">
+          <span class="brand-badge" aria-hidden="true"></span>
+          Taciany Lima
+        </a>
+        <div class="nav-links" role="menubar">
+          <a role="menuitem" href="sobre.html" >Sobre mim</a>
+          <a role="menuitem" href="formacao.html" >Formação & Idiomas</a>
+          <a role="menuitem" href="portfolio.html" >Portfólio</a>
+          <a role="menuitem" href="contato.html" aria-current="page">Contato</a>
+          <a role="menuitem" href="https://www.linkedin.com/in/taciany-lima-66734613b/" target="_blank" rel="noopener">LinkedIn ↗</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+  <main id="conteudo">
+
+  <section class="hero">
+    <div class="container">
+      <h1>Contato</h1>
+      <p class="lead">Formulário somente visual para demonstração (sem back-end).</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <!-- Formulário visual. action="#" evita navegação; utilize serviços de formulário se quiser torná-lo funcional. -->
+      <form class="form" action="#" method="post" novalidate aria-label="Formulário de contato (demonstração)">
+        <div class="input">
+          <label for="nome">Nome</label>
+          <input id="nome" name="nome" type="text" placeholder="Seu nome completo">
+        </div>
+        <div class="input">
+          <label for="email">Email</label>
+          <input id="email" name="email" type="email" placeholder="voce@exemplo.com">
+          <small>Não enviaremos nada sem sua permissão.</small>
+        </div>
+        <div class="input">
+          <label for="mensagem">Mensagem</label>
+          <textarea id="mensagem" name="mensagem" placeholder="Como posso ajudar?"></textarea>
+        </div>
+        <div class="btn-row">
+          <button class="btn" type="submit" aria-disabled="true">Enviar (demo)</button>
+          <a class="btn ghost" href="index.html">Voltar ao início</a>
+        </div>
+        <p class="note">Este formulário é apenas ilustrativo. Para contato real, use o <a href="https://www.linkedin.com/in/taciany-lima-66734613b/" target="_blank" rel="noopener">LinkedIn</a>.</p>
+      </form>
+    </div>
+  </section>
+
+  </main>
+  <footer class="site-footer">
+    <div class="container grid">
+      <small>© 2025 Taciany Lima — Portfólio pessoal. Feito em HTML5 + CSS.</small>
+      <small>Design leve, acessível e sem frameworks. <a href="index.html">Início</a></small>
+    </div>
+  </footer>
+</body>
+</html>
